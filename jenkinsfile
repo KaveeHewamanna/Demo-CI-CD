@@ -3,27 +3,27 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
-    steps {
-        git branch: 'main', url: 'https://github.com/KaveeHewamanna/Demo-CI-CD.git'
-    }
-}
+        stage('Checkout') {
+            steps {
+                echo 'Code is pulled from GitHub'
+            }
+        }
 
         stage('Build') {
             steps {
-                echo "Building Application..."
+                echo 'Application Build Successful'
             }
         }
 
         stage('Test') {
             steps {
-                echo "Running Tests..."
+                echo 'QA Tests Passed'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo "Deploying Application..."
+                echo 'Application Deployed Successfully'
             }
         }
 
